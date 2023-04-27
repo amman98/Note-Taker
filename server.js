@@ -9,6 +9,7 @@ const app = express();
 
 app.use(clog);
 
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);

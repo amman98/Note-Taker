@@ -9,7 +9,7 @@ notes.get("/notes", (req, res) => {
     readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
 });
 
-//
+// POST Route adds a note and saves it
 notes.post("/notes", (req, res) => {
     const {title, text} = req.body;
 
