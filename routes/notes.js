@@ -14,10 +14,11 @@ notes.post("/notes", (req, res) => {
     const {title, text} = req.body;
 
     if(title || text) {
+        // creates a note object
         const newNote = {
             title,
             text,
-            id: uuidv4()
+            id: uuidv4() // creates a random id
         };
 
         readAndAppend(newNote, './db/db.json');
